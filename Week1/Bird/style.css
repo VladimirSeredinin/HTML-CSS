@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(78, 156, 229);
+}
+.bird{
+    position: absolute;
+    width: 110px;
+    height: 200px;
+    bottom: 0px;
+    left: 60%;
+}
+.body{
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    background-color: black;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 100px;
+    height: 200px;
+    z-index: 2;
+}
+.beak{
+    position: absolute;
+    bottom: 130px;
+    right: 0%;
+    background-color: yellow;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+.eye{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    z-index: 3;
+
+}
