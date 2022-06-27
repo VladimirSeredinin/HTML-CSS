@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&family=Courgette&display=swap');
+
+body {
+    font-family:  'Alegreya Sans', sans-serif;
+    width: 80%;
+    margin: 0px auto;
+}
+.header {
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+}
+.head{
+    position: absolute;
+    z-index: 1;
+    height: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+    position:fixed;
+    top: 20px;
+    right: 90px;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.7);
+
+
+}
+.image_vs{
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 90px;
+}
+.image_vs img
+{
+    box-shadow: 1px 1px 5px rgb(153, 166, 167);
+
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+.section:hover{
+    box-shadow: 0 0 5px rgb(27, 70, 77);
+}
+.image_gf{
+    background-image: url("./Greenfocus.jpeg");
+    background-size: 20% auto;
+    background-position: -2% 250px;
+    opacity: 0.7;
+    background-repeat: no-repeat;
+}
+.image_se{
+    background-image: url("./Cosenergo.jpeg");
+    background-size: 30% auto;
+    background-position: -7% 180px;
+    opacity: 0.7;
+    background-repeat: no-repeat;
+}
+.image_ma{
+    background-image: url("./Monarch.jpeg");
+    background-size: 20% auto;
+    background-position: -1% 190px;
+    opacity: 0.7;
+    background-repeat: no-repeat;
+}
+.image_me{
+    background-image: url("./Mosenergo.jpeg");
+    background-size: 25% auto;
+    background-position: -1% 180px;
+    opacity: 0.7;
+    background-repeat: no-repeat;
+}
+.content_name{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100%;
+    //height: 7vh;
+    font-size: large;
+    margin: 5px;
+}
+.name{
+    display: inline-block;
+    width: 35%;
+    //height: 7vh;
+    text-align: right;
+    font-family:  'Alegreya Sans', sans-serif;
+    text-transform: capitalize;
+    font-size: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.null{
+    width: 5%;
+    //height: 7vh;
+}
+.content{
+    display: inline-block;
+    width: 60%;
+    //height: 7vh;
+    font-family:  'Alegreya Sans', sans-serif;
+    text-transform: none;
+    font-size: 22px;
+}
+.content_r{
+    display: inline-block;
+    width: 60%;
+    font-family:  'Alegreya Sans', sans-serif;
+    text-transform: none;
+    font-size: 22px;
+    position: relative;
+}
+.content_r ul{
+    z-index:999;
+    position:absolute;
+    height: 5ex;
+    overflow: hidden;
+    background-color: white;;
+    transition: height 1s, transform 1s, background-color 1s;
+    transform: scale(1, 1);
+    text-overflow: ellipsis;
+}
+.content_r:hover ul{
+    inset: 3px 3px 5px 5px rgb(171, 206, 211);
+    background-color: rgb(205, 214, 216);
+    box-shadow: 0px 1px 5px rgb(171, 206, 211);
+    inset: 3px 3px 5px 5px rgb(171, 206, 211);
+    top: -7ex;
+    height: 20ex;
+    transform: scale(1,5 1,5);
+    overflow-Y: scroll;
+}
+.content_r ul::before
+{
+    content: '\25BC';
+    position: absolute;
+    top: 2ex;
+    right:-13px;
+    padding: 10px;
+    text-align: left;
+}
+.last{
+    border-bottom: 1px solid gray;
+    
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 35px;
+    margin: 25px;
+}
+.image_ss {
+    border: 0 solid rgb(171, 206, 211);
+    box-shadow: 2px 2px 5px rgb(164, 173, 174);
+    width: 102px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
