@@ -1,0 +1,621 @@
+@font-face { 
+    font-family: "akkurat-bold";
+    src: url(https://www.triodos.nl/wro/fonts/akkurat-bold.woff);
+    src: url(./akkurat-bold.woff)
+ }
+ @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap');
+ body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+ }
+header{
+    background-color: white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.3rem;
+    margin: 0;
+}
+.hamburger-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.hamburger-menu svg{
+    width: 2.3rem;
+    height: 2.3rem;
+    fill: #00006b;
+}
+
+.logo img{
+    width: 100%;
+    height: 1.9rem;
+}
+.inloggen a{
+    text-decoration: none;
+    color: #00006b;
+}
+.inloggen p{
+    font-size: 1.1rem;
+    color: #00006b;
+}
+
+.meer{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(./triodoshippo_heroImageDesktop.jpeg);
+    background-size: cover;
+}
+.meer-container{
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.304);
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    z-index: 1;
+}
+.meer-head{
+    width: 100%;
+    margin: 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 3rem;
+}
+.meer-text{
+    width: 100%;
+    margin: 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.4rem;
+}
+.meer-button{
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;    
+    width: 18%;
+    height: 9%;
+    margin: 1rem;
+    margin-bottom: 4rem;
+    padding: 0.3rem;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 1.1rem;
+    color: #00006b;
+    border: 1px solid lightskyblue;
+    border-radius: 4rem;
+    overflow: hidden;
+}
+a.meer-button{
+    text-decoration: none;
+    text-align: center;
+    color: #00006b;
+}
+.meer-button svg{
+    margin: 0;
+    padding: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: #00006b;
+}
+.meer-button:hover{
+    background-color: #00006b;
+    color:white;
+    border: 1px solid #00006b;
+}
+.meer-button:hover svg{
+    fill: white;
+}
+.introduce{
+    height: 16vh;
+    padding: 5%;
+    margin: 0;
+}
+.introduce-text{
+   padding-left: 10%;
+   padding-right: 10%;
+    line-height: 1.7;
+    text-align: left;
+    color: #00006b;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.menu-ul1 svg{
+    margin: 0;
+    padding: 0;
+    padding-right: 0.5rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    fill: #00006b;
+}
+.menu-ul2 svg{
+    margin: 0;
+    padding: 0;
+    padding-right: 0.5rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    fill: #00006b;
+}
+.menu{
+    color: #00006b;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.menu a{
+    text-decoration: none;
+    color: #00006b;
+}
+.menu ul{
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+}
+.menu-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 5vh;
+}
+.menu{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    background-color: #e7f2f5;
+}
+.menu p{
+    margin: 0.1;
+}
+.menu-ul1 h3{
+    margin: 0;
+}
+.menu-ul2 h3{
+    margin: 0;
+}
+.menu-p{
+    border-bottom: 0.1rem solid #9b9bf5;
+}
+.menu svg{
+    margin: 0.1;
+}
+.menu-div1{
+    grid-column: 2/3;
+    padding-left: 13%;
+}
+.menu-div2{
+    grid-column: 3/4;
+    padding-left: 13%;
+}
+.menu-p:hover{
+    border-bottom: 0.1rem solid #00006b;
+}
+.bescherm-main{
+    display: flex;
+    justify-content: center;
+    background-color: #e7f2f5;
+    padding: 5%;
+}
+.bescherm{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    background-color: white;
+    border-top: 0.5rem solid white;
+    border-left: 3rem solid white;
+    border-bottom: 0.5rem solid white;
+    border-right: 3rem solid white;
+}
+.bescherm a{
+    text-decoration: none;
+    color: #00006b;
+}
+.bescherm p{
+    margin-left: 2rem;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+}
+.bescherm svg{
+    width: 3.6rem;
+    height: 3.6rem;
+    fill: #9b9bf5;
+    margin-left: 5rem;
+}
+.bescherm:hover svg{
+    fill: #00006b;
+}
+.widget-up{
+    background-image: linear-gradient(#006106, #0096ff);
+    color: white;
+    text-align: center;
+    height: 53vh;
+    padding: 2rem;
+}
+.widget-down{
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+}
+.tv{
+    height: 44vh;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    background-color: #4bf0b9;
+    border-radius: 0.6rem;
+}
+.tv h2{
+    color: #00006b;
+    font-size: 1.9rem;
+}
+.tv-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+}
+.tv-item a{
+    text-decoration: none;
+    color: #00006b;
+}
+.tv-item p{
+    padding: 0.8rem;
+    margin: 0.8rem;
+    font-size: 1.2rem;
+    border: 0.1rem solid #9b9bf5;
+    border-radius: 4rem;
+}
+.tv-item:hover p{
+    border: 0.1rem solid #00006b;
+}
+.tv-item svg{
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    fill: #9b9bf5;
+}
+.tv-item:hover svg{
+    width: 3rem;
+    height: 3rem;
+    fill: #00006b;
+}
+.mggg{
+    height: 70vh;
+    margin-top: 7%;
+    background-image: url(./kwymg-background.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-bottom: 4rem;
+}
+.mggg h4{
+    color: white;
+    font-size: 1.2rem;
+}
+.text{
+    color: white;
+    font-size: 1.9rem;
+    width: 60%;
+    text-align: center;
+    margin-top: 10%;
+}
+.project{
+    font-size: 1.08rem;
+    color: #00006b;
+    background-color: white;
+    border: 0.1rem solid #9b9bf5;
+    border-radius: 0.4rem;
+    height: 2.3rem;
+    padding-left: 1rem;
+    padding-bottom: 0.8rem;
+    padding-right: 1rem;
+    padding-right: 0,8rem;
+}
+.project a{
+    text-decoration: none;
+}
+.project:hover{
+    border: 0.1rem solid #00006b;
+}
+.stories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+}
+.head-stories{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00006b;
+}
+.intro-stories{
+    text-align: center;
+    width: 50%;
+    font-size: 1.2rem;
+    color: #00006b;
+
+}
+.item-stories{;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-items: start;
+    overflow-x: hidden;
+    height: 100vh;
+}
+.item-stories:hover{
+    transform: translate(2px,2px);
+}
+.story0{
+    background-image: url(./triodoshippo_overviewImage.jpeg);
+}
+.story0{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32rem;
+    height: 70vh;
+    margin: 0.5rem;
+    padding: 0;
+    background-size: cover;
+}
+.h-story0 h4{
+    display: inline;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    text-align: left;
+    overflow: wrap;
+}
+.p-story0 p{
+    display: inline ;
+    padding: 0.1rem;
+    margin: 0.1;
+    overflow: wrap;
+    font-size: 1rem;
+    color: #00006b;
+}
+.p-story0{
+    margin: 0;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.story1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 16rem;
+    height: 70vh;
+    margin: 0.5rem;
+    padding: 0;
+    background-size: cover;
+}
+.h-story1 h4{
+    display: inline;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    text-align: left;
+    overflow: wrap;
+}
+.p-story1 p{
+    display: inline ;
+    padding: 0.1rem;
+    margin: 0.1;
+    overflow: wrap;
+    font-size: 1rem;
+    color: #00006b;
+}
+.p-story1{
+    margin: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.story1{
+    background-image: url(./triodoshippo_overviewImage\ \(1\).jpeg);
+}
+.story2{
+    background-image: url(./triodoshippo_overviewImage\ \(2\).jpeg);
+}
+.story3{
+    background-image: url(./triodoshippo_overviewImage\ \(3\).jpeg);
+}
+.start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.start-h{
+    width: 50rem;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+    color: #00006b;
+}
+.start-blok{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25vh;
+    background-color: #4bf0b9;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-left: 14rem;
+    padding-bottom: 1rem;
+    padding-right: 14rem;
+    color: #00006b;
+    border-radius: 0.3rem;
+}
+.start-button{
+    border: 0.2rem solid #0096ff;
+    font-size: 1rem;
+    width: 10rem;
+   border-radius: 0.3rem;
+   align-items: center;
+   text-align: center;
+}
+.start-button a{
+    text-decoration: none; 
+    color: #00006b;
+}
+.start-button:hover{
+    border: 0.2rem solid #00006b;
+}
+ul.list-ul{
+    list-style: none;
+}
+.list-item a{
+    text-decoration: none;
+    color:#00006b;
+    font-size: 1.1rem;
+}
+.list-ul h3{
+    color: #00006b;
+    margin: 0;
+}
+.list-item svg{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    fill:#00006b;
+    margin: 0.5rem;
+}
+.list-item{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 0;
+}
+.start-list{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.list-item:hover svg{
+    transform: translate(2px,2px);
+}
+footer{
+    background-color: #00006b;
+    padding: 2rem;
+    height: 25vh;
+    width: 94%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: 1px solid red;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    align-content: flex-end;
+    background: 1px solid red;
+    width: 40%;
+    margin: 0;
+} 
+
+.location{
+    color:white;
+    width: 40%;
+    margin: 0;
+    background: 1px solid red;
+}
+.volg{
+    color: white;
+    width: 50%;
+    margin: 0;
+    background: 1px solid red;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: 2px solid red;
+    width: 40%;
+    margin: 0;
+}
+
+.icon img{
+    width: 1rem;
+    height: 1rem;
+    text-decoration: none;
+}
+.facebook{
+    background-image: url(./facebook.jpeg);
+}
+.instagram{
+    background-image: url(./instagram.jpeg);
+}
+.linkedin{
+    background-image: url(./linkedin.jpeg);
+}
+.twitter{
+    background-image: url(./twitter.jpeg);
+}
+.youtube{
+    background-image: url(./youtube.jpeg);
+}
+
+.contact-h{
+    display: flex;
+    position: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 40%;
+    margin: 0;
+    bottom: 2rem;
+    left: 2rem;
+    background: 1px solid red;
+}
+
+.point svg{
+    width: 0.8rem;
+    height: 0.8rem;
+    fill: white;
+}
+.point a{
+    text-decoration: none;
+    color: white;
+}
+
+.point{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    background: 1px solid red;
+}
+
+.widget1{
+    display: block;
+    position: absolute;
+    height: 40rem;
+    width: 30rem;
+    border-radius: 3rem;
+    left: 5rem;
+    top: 80rem;`
+    background-image: url(./triodoshippo_flexRegular.jpeg);
+    background-position: cover;
+    background-color: 1px solid :blank;
+}

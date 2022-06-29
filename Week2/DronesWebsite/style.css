@@ -1,0 +1,240 @@
+
+*{
+    box-sizing: border-box;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+.flexbox-section{
+    padding: 1em;
+}
+h1{
+    padding-left: 1em;
+}
+h2{
+    padding-left: 1em;
+}
+.flexbox-selection{
+    margin: auto;
+    padding: 2em;
+}
+.grid-section{
+    margin: auto;
+    padding: 1em;
+}
+.flexbox-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.grid-list{
+    display: grid;
+    justify-items: start;
+    align-items: stretch;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.flexbox-item{
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1em;
+}
+.grid-item{
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1em;
+    margin: 0.5em;
+}
+.flexbox-item img{
+    width: 50%;  
+}
+.grid-item img{
+    width: 50%;
+}
+.flexbox-item:nth-child(2) p{
+    text-align: right;
+}
+.grid-item:nth-child(2) p{
+    text-align: right;
+}
+/* hover */
+.flexbox-item:hover{
+    gap:0em 0em;
+    transform: scale(1.1, 1.1);
+    background-color: white;
+    opacity: 1;
+    z-index: 1;
+    box-shadow: 1em 1em 1em gray;
+}
+.grid-item:hover{
+    gap: 0em 0em;
+    transform: scale(1.1, 1.1);
+    background-color: white;
+    opacity: 1;
+    z-index: 1;
+    box-shadow: 1em 1em 1em gray;
+}
+.flexbox-item{
+    transition: 1s;
+    background-color: white;
+    opacity: 1;
+}
+.grid-item{
+    transition: 1s;
+    background-color: white;
+    opacity: 1;
+}
+
+/* for PC */
+@media screen and (min-width:1024px){
+    .flexbox-list{
+    margin: 1em;
+    padding: 1em;
+    gap: 1em;
+    }
+    .flexbox-item:first-child{
+    width: 48%;
+    gap: 1em 1em;
+    }
+    .flexbox-item:first-child img{
+    float:left;
+    }
+    .flexbox-item:first-child p{
+    padding-top: 3em;
+    margin-left: 4em;
+    }
+    .flexbox-item{
+    width: 23%;
+    gap: 1em 1em;
+    }
+    .flexbox-item:last-child{
+    width: 48%;
+    gap: 1em 1em;
+    }
+    .flexbox-item:last-child img{
+    float:left;
+    }
+    .flexbox-item:last-child p{
+    padding-top: 2em;
+    margin-left: 4em;
+    }
+    /* grid for PC */
+    .grid-list{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-auto-flow: row;
+    margin: 1em;
+    padding: 1em;
+    gap: 1em;
+    }
+    .grid-item:first-child{
+    grid-column: 1/2;
+    width: 206%;
+    gap: 1em 1em;
+    }
+    .grid-item:nth-child(2){
+    grid-column: 3/3;
+    gap: 1em 1em;
+    }
+    .grid-item:last-child{
+    grid-column: 3/4;
+    width: 206%;
+    gap: 1em 1em;
+    }
+    .grid-item:first-child img{
+    float:left;
+    }
+    .grid-item:first-child p{
+    padding-top: 3em;
+    margin-left: 4em;
+    }
+    .grid-item:last-child img{
+    float:left;
+    }
+    .grid-item:last-child p{
+    padding-top: 2em;
+    margin-left: 4em;
+    }
+}
+/* for laptop */
+@media screen and (max-width:1024px) and (min-width:600px){
+    .flexbox-list{
+    margin: 0.5em;
+    padding: 0.5em;
+    gap: 0.5em;
+    }
+    .flexbox-item:nth-child(1){
+    width: 49%;
+    gap: 0.5em 0.5em;
+    }
+    .flexbox-item{
+    width: 32%;
+    gap: 0.5em 0.5em;
+    }
+    .flexbox-item:nth-child(2){
+    width: 49%;
+    gap: 0.5em 0.5em;
+    }
+    /* grid for laptop */
+    .grid-list{
+    display: grid;
+    grid-template-columns: repeat(16%,6) 4%;
+    width: 100%;
+    }
+    .grid-item:nth-child(3n+2){
+    grid-column-start: 5;
+    grid-column-end: 7;
+    }
+    .grid-item:nth-child(3n){
+    grid-column-start: 1;
+    grid-column-end: 3;
+    }
+    .grid-item:nth-child(3n+1){
+    grid-column-start: 3;
+    grid-column-end: 5;
+    }
+    .grid-item:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 4;
+    }
+    .grid-item:nth-child(2){
+    grid-column-start: 4;
+    grid-column-end: 7;
+    }
+}
+/* for telephone */
+@media screen and (max-width:600px) {
+    p{
+    font-size: small;
+    }
+    h1, h2, h3{
+    font-size: small;
+    }
+    .flexbox-item{
+    flex-direction: row;
+    align-content: stretch;
+    width: 98%;
+    margin: 0.25em;
+    padding: 0.25em;
+    gap: 0.25em 0.25em;
+    }
+    /* grid for phone */
+    .grid-list{
+    grid-auto-flow: row;
+    justify-items: stretch;
+    width: 98%;
+    margin: 0.25em;
+    padding: 0.25em;
+    gap: 0.25em 0.25em;
+    }
+}
