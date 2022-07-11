@@ -1,15 +1,16 @@
 @font-face { 
-    font-family: "akkurat-bold";
     src: url(https://www.triodos.nl/wro/fonts/akkurat-bold.woff);
     src: url(./akkurat-bold.woff)
- }
- @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap');
- body{
+}
+body{
     width: 100%;
     padding: 0;
     margin: 0;
     font-family: 'Work Sans', sans-serif;
- }
+}
+a {
+    text-decoration: none;
+}
 header{
     background-color: white;
     display:flex;
@@ -54,7 +55,8 @@ header{
     height: 80vh;
     background-color: rgba(0, 0, 0, 0.304);
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
     z-index: 1;
 }
@@ -203,12 +205,13 @@ a.meer-button{
 .bescherm{
     display: flex;
     flex-direction: row;
-    align-self: center;
+    align-items: center;
     background-color: white;
     border-top: 0.5rem solid white;
     border-left: 3rem solid white;
     border-bottom: 0.5rem solid white;
     border-right: 3rem solid white;
+    border-radius: 0.4rem;
 }
 .bescherm a{
     text-decoration: none;
@@ -220,14 +223,19 @@ a.meer-button{
     font-size: 1.2rem;
 }
 .bescherm svg{
-    width: 3.6rem;
-    height: 3.6rem;
+    width: 2.2rem;
+    height: 2.2rem;
     fill: #9b9bf5;
     margin-left: 5rem;
+    border: 0.2rem solid #9b9bf5;
+    border-radius: 40px;
+    transition: 0.6s;
 }
 .bescherm:hover svg{
-    fill: #00006b;
+    border: 0.2rem solid #00006b;
+    border-radius: 40px;
 }
+
 .widget-up{
     background-image: linear-gradient(#006106, #0096ff);
     color: white;
@@ -236,14 +244,13 @@ a.meer-button{
     padding: 2rem;
 }
 .widget-down{
-    height: 100vh;
+    height: 120vh;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-
 }
 .tv{
-    height: 44vh;
+    height: 60vh;
     width: 75%;
     display: flex;
     flex-direction: column;
@@ -257,41 +264,48 @@ a.meer-button{
     color: #00006b;
     font-size: 1.9rem;
 }
-.tv-item{
+.tv-items{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 0;
-
+    width: 60%;
+    transition: 0.6s;
 }
-.tv-item a{
+
+.tv-item {
     text-decoration: none;
     color: #00006b;
 }
-.tv-item p{
+.tv-item p {
     padding: 0.8rem;
     margin: 0.8rem;
     font-size: 1.2rem;
-    border: 0.1rem solid #9b9bf5;
+    border: 0.2rem solid #9b9bf5;
     border-radius: 4rem;
+    transition: 0.6s;
 }
-.tv-item:hover p{
-    border: 0.1rem solid #00006b;
+.tv-items a:hover p{
+    border: 0.2rem solid #00006b;
 }
+
 .tv-item svg{
     margin-left: 1rem;
-    width: 3rem;
-    height: 3rem;
+    width: 2.3rem;
+    height: 2.3rem;
     fill: #9b9bf5;
+    border: 0.2rem solid #9b9bf5;
+    border-radius: 30px;
+    transition: 0.6s;
 }
-.tv-item:hover svg{
-    width: 3rem;
-    height: 3rem;
-    fill: #00006b;
+.tv-item-sp:hover svg{
+    border: 0.2rem solid #00006b;
+    border-radius: 30px;
 }
 .mggg{
-    height: 70vh;
+    height: 80vh;
     margin-top: 7%;
     background-image: url(./kwymg-background.png);
     background-size: cover;
@@ -323,9 +337,8 @@ a.meer-button{
     padding-bottom: 0.8rem;
     padding-right: 1rem;
     padding-right: 0,8rem;
-}
-.project a{
     text-decoration: none;
+    transition: 0.6s;
 }
 .project:hover{
     border: 0.1rem solid #00006b;
@@ -335,32 +348,36 @@ a.meer-button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 110vh;
+    height: 115vh;
 }
 .head-stories{
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #00006b;
+    padding: 0.1rem;
 }
 .intro-stories{
     text-align: center;
     width: 50%;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #00006b;
-
+    padding: 0.3rem;
 }
-.item-stories{;
+.item-stories{
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-items: start;
-    overflow-x: hidden;
     height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
 }
-.item-stories:hover{
-    transform: translate(2px,2px);
+.item-stories>div:hover{
+    transform: translate(0px, -5px);
 }
+
 .story0{
     background-image: url(./triodoshippo_overviewImage.jpeg);
 }
@@ -368,22 +385,23 @@ a.meer-button{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 32rem;
+    min-width: 520px;
     height: 70vh;
     margin: 0.5rem;
     padding: 0;
     background-size: cover;
+    transition: 0.6s;
 }
 .h-story0 h4{
-    display: inline;
     width: 100%;
     color: rgb(255, 255, 255);
     font-size: 1.3rem;
     text-align: left;
     overflow: wrap;
+    padding: 0.4rem;
+    margin: 0;
 }
 .p-story0 p{
-    display: inline ;
     padding: 0.1rem;
     margin: 0.1;
     overflow: wrap;
@@ -400,26 +418,27 @@ a.meer-button{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 16rem;
+    min-width: 260px;
     height: 70vh;
     margin: 0.5rem;
     padding: 0;
     background-size: cover;
+    transition: 0.6s;
 }
 .h-story1 h4{
-    display: inline;
     width: 100%;
     color: rgb(255, 255, 255);
     font-size: 1.3rem;
     text-align: left;
     overflow: wrap;
+    padding: 0.4rem;
+    margin: 0;
 }
 .p-story1 p{
-    display: inline ;
     padding: 0.1rem;
     margin: 0.1;
     overflow: wrap;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #00006b;
 }
 .p-story1{
@@ -429,13 +448,17 @@ a.meer-button{
 }
 .story1{
     background-image: url(./triodoshippo_overviewImage\ \(1\).jpeg);
+    height: 92%;
 }
 .story2{
     background-image: url(./triodoshippo_overviewImage\ \(2\).jpeg);
+    height: 96%;
 }
 .story3{
     background-image: url(./triodoshippo_overviewImage\ \(3\).jpeg);
+    height: 92%;
 }
+/* block start*/
 .start{
     display: flex;
     flex-direction: column;
@@ -449,117 +472,145 @@ a.meer-button{
     padding: 2rem;
     color: #00006b;
 }
-.start-blok{
+.start-block{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 25vh;
+    justify-content: space-around;
     background-color: #4bf0b9;
     font-size: 1.5rem;
-    padding-top: 1rem;
-    padding-left: 14rem;
-    padding-bottom: 1rem;
-    padding-right: 14rem;
+    padding: 2rem;
+    width: 80%;
     color: #00006b;
     border-radius: 0.3rem;
+    text-align: center;
 }
 .start-button{
     border: 0.2rem solid #0096ff;
     font-size: 1rem;
     width: 10rem;
-   border-radius: 0.3rem;
-   align-items: center;
-   text-align: center;
+    border-radius: 0.3rem;
+    align-items: center;
+    text-align: center;
+    transition: 0.6s;
+    color: #00006b;
 }
 .start-button a{
     text-decoration: none; 
     color: #00006b;
 }
-.start-button:hover{
-    border: 0.2rem solid #00006b;
+.start{
+    margin-bottom: 10vh;
 }
-ul.list-ul{
-    list-style: none;
+.start-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 5vh;
 }
-.list-item a{
-    text-decoration: none;
-    color:#00006b;
-    font-size: 1.1rem;
+.start-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 33.3%;
+    min-width: 300px;
 }
-.list-ul h3{
+.list-header {
     color: #00006b;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+}
+.list-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 7vh;
+    margin: 0;
+    padding: 0;
+    color: #00006b;
+}
+p.list-link{
     margin: 0;
 }
-.list-item svg{
+h3.list-header{
+    margin: 0;
+}
+.list-content3{
+    margin-top: 3vh;
+}
+svg.list-svg {
     display: block;
     width: 1rem;
     height: 1rem;
     fill:#00006b;
     margin: 0.5rem;
+    transition: 0.6s;
 }
-.list-item{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    margin: 0;
+
+.start-items a:hover svg {
+    transform: translate(2px, 0px);
 }
-.start-list{
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.start-button:hover {
+    border: 0.2rem solid #00006b;
 }
-.list-item:hover svg{
-    transform: translate(2px,2px);
-}
+/* block footer */
 footer{
     background-color: #00006b;
     padding: 2rem;
-    height: 25vh;
     width: 94%;
 }
 
 .row{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    background: 1px solid red;
+    justify-content: space-around;
+    font-size: 1.0rem;
 }
 .column{
     display: flex;
     flex-direction: column;
     align-items: baseline;
     align-content: flex-end;
-    background: 1px solid red;
     width: 40%;
     margin: 0;
 } 
 
 .location{
     color:white;
-    width: 40%;
+    width: 50%;
     margin: 0;
-    background: 1px solid red;
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+}
+div.location {
+    border: 2px solid white;
+    border-radius: 2px;
+    border-radius: 2px;
 }
 .volg{
     color: white;
     width: 50%;
     margin: 0;
-    background: 1px solid red;
+    font-size: 1.2rem;
 }
 
 .social{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background: 2px solid red;
-    width: 40%;
+    width: 50%;
     margin: 0;
 }
 
 .icon img{
-    width: 1rem;
-    height: 1rem;
+    width: 1.6rem;
+    height: 1.6rem;
     text-decoration: none;
 }
 .facebook{
@@ -583,39 +634,291 @@ footer{
     position: row;
     align-items: flex-end;
     justify-content: space-around;
-    width: 40%;
+    width: 50%;
     margin: 0;
     bottom: 2rem;
     left: 2rem;
-    background: 1px solid red;
 }
 
 .point svg{
     width: 0.8rem;
     height: 0.8rem;
     fill: white;
+    padding-right: 0.4rem;
 }
-.point a{
-    text-decoration: none;
-    color: white;
-}
-
 .point{
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    background: 1px solid red;
+    color: white;
+    font-size: 1.2rem;
 }
-
 .widget1{
     display: block;
     position: absolute;
-    height: 40rem;
-    width: 30rem;
-    border-radius: 3rem;
+    height: 23rem;
+    width: 18rem;
+    border-radius: 1.6rem;
     left: 5rem;
-    top: 80rem;`
+    top: 90rem;
     background-image: url(./triodoshippo_flexRegular.jpeg);
-    background-position: cover;
-    background-color: 1px solid :blank;
+    background-size: contain;
+    background-color: 1px solid black;
+    color: white;
+    padding: 1rem;
+}
+.widget-shadow{
+    background-color: rgba(0, 0, 0, 0.304);
+}
+@media (max-width: 600px){
+    .hamburger-menu svg {
+        width: 2.0rem;
+        height: 2.0rem;
+    }
+    .logo img {
+        width: 100%;
+        height: 1.5rem;
+    }
+    .inloggen p {
+        font-size: 0.8rem;
+    }
+    
+    .meer {
+        background-image: url(./triodoshippo_flexRegular1.jpeg);
+        height: 80vh;
+        background-position: center;
+    }
+    .meer-container {
+        height: 80vh;
+        width: 90%;
+    }
+        
+    .meer-head {
+        font-size: 1.8rem;
+    }
+    .meer-text {
+        font-size: 0.9rem;
+        width: 90%;
+    }
+    .meer-button {
+        margin: 0.9rem;
+        margin-bottom: 1.9rem;
+        width: 40%;
+        font-size: 1.0rem;
+    }
+
+    .introduce {
+        padding: 1rem;
+    }
+    .introduce-text {
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        line-height: 1.3;
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    .menu {
+        padding: 0.7rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu {
+        font-size: 1.0rem;
+    }
+
+    .bescherm {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        border-left: 2.6rem solid white;
+        border-right: 2.6rem solid white;
+        height: 17vh;
+    }
+    .bescherm p {
+        margin-left: 0.1rem;
+        padding-right: 0.1rem;
+        font-size: 1.0rem;
+    }
+    .bescherm svg {
+        margin-left: 0;
+    }
+    .widget-up {
+        font-size: 0.9rem;
+        height: 48vh;
+        padding: 1rem;
+    }
+    .widget-down {
+        height: 100vh;
+    }
+    .widget1 {
+        height: 22rem;
+        width: 17.2rem;
+        left: 5rem;
+        top: 78rem;
+    }
+    .wi-h {
+        font-size: 1.2rem;
+    }
+    .wi-p {
+        font-size: 0.9rem;
+    }
+
+    .tv {
+        height: 55vh;
+        width: 90%;
+    }
+        
+    .tv h2 {
+        font-size: 1.3rem;
+        margin: 7%;
+    }
+    .tv-items {
+        width: 80%;
+        padding-bottom: 5%;
+    }
+    .tv-item p {
+        padding: 1rem;
+        margin: 0.4rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    .tv-item svg {
+        margin-left: 1rem;
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .mggg h4 {
+        font-size: 1.1rem;
+    }
+    .text {
+        font-size: 1.5rem;
+        margin-top: 32%;
+        width: 85%;
+    }
+    .project {
+        font-size: 0.9rem;
+    }
+    .head-stories {
+        font-size: 0.9rem;
+        }
+    .intro-stories {
+        font-size: 1.0rem;
+        width: 90%;
+        padding: 0.1rem;
+        }
+/* block srart */
+
+    .start {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .start-h {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .start-block {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.96rem;
+        padding: 1rem;
+    }
+    .start-block p{
+        align-items: center;
+        font-size: 1rem;
+    }
+    .start-button {
+        font-size: 0.8rem;
+        width: 8rem;
+    }
+
+    .start-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 80%;
+        margin-top: 4vh;
+    }
+    
+    .start-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .start-items::after{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        content: " ";
+        left:0px;
+        border-bottom: 1px solid gray;
+        overflow: hidden;
+    }
+    .start-items:first-child::after{
+        border-bottom: 0px solid white;
+    }
+        
+    .list-header {
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-align: left;
+        margin-top: 2rem;
+        padding: 0;
+        height: 5vh;
+        text-align: center;
+    }
+    
+    .list-content {
+        height: 5vh;
+        margin-bottom: 2rem;
+    }
+    .list-link p{
+        line-height: 3rem;
+    }
+    .list-header h3{
+        margin: 0;
+    }
+    
+    .list-content3 {
+        margin-top: 3vh;
+    }
+    
+    svg.list-svg {
+        width: 0.6rem;
+        height: 0.6rem;
+        margin: 0.5rem;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    /* footer for phone */
+    .column {
+        width:100%
+    }
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+    .icon {
+            margin: 1rem;
+        }
+        .contact-h {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
 }
